@@ -1,0 +1,17 @@
+version: 4.2.29
+session: 680c736852f99ae371c6f032
+steps:
+  - prompt: Click on "See more about my books".
+    commands:
+      - command: hover-text
+        text: See more about my books
+        description: link below the book cover image
+        action: click
+  - prompt: Assert that the page with more book information is loaded.
+    commands:
+      - command: assert
+        expect: the page contains the text "Dreamwalker"
+  - prompt: Verify no navigation errors are present.
+    commands:
+      - command: assert
+        expect: the page does not contain "404" or "Page Not Found"
