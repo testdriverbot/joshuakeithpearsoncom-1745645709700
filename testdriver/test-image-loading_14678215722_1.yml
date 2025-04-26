@@ -1,0 +1,13 @@
+version: 4.2.29
+session: 680c73863f8647e0819efbeb
+steps:
+  - prompt: Reload the page.
+    commands:
+      - command: press-keys
+        keys:
+          - control
+          - r
+  - prompt: Assert that all images on the page are loaded without errors.
+    commands:
+      - command: assert
+        expect: all images on the page are loaded without errors
