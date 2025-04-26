@@ -1,0 +1,15 @@
+version: 4.2.29
+session: 680c737552f99ae371c6f03a
+steps:
+  - prompt: Submit the search.
+    commands:
+      - command: hover-text
+        text: Notify me
+        description: notify me button below the email and name fields
+        action: click
+  - prompt: Assert that search results are relevant and displayed correctly.
+    commands:
+      - command: hover-text
+        text: VERIFY
+        description: verify button in the CAPTCHA challenge
+        action: click
