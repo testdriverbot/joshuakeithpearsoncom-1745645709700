@@ -1,0 +1,27 @@
+version: 4.2.29
+session: 680c73683f8647e0819efbd5
+steps:
+  - prompt: Click on "Sign up for the newsletter!" button.
+    commands:
+      - command: hover-text
+        text: Sign up for the newsletter!
+        description: button at the top of the page
+        action: click
+  - prompt: Assert that the newsletter sign-up form is displayed.
+    commands:
+      - command: assert
+        expect: the text "Dreamwalker Release Mailing List" is visible
+  - prompt: Fill in the sign-up form with test data.
+    commands:
+      - command: hover-text
+        text: Email
+        description: email input field
+        action: click
+      - command: type
+        text: test@example.com
+      - command: hover-text
+        text: Name
+        description: name input field
+        action: click
+      - command: type
+        text: Test User
