@@ -1,0 +1,15 @@
+version: 4.2.29
+session: 680c73763f8647e0819efbde
+steps:
+  - prompt: Scroll to the "About the Author" section.
+    commands:
+      - command: assert
+        expect: the "About the Author" section is visible
+  - prompt: Assert that the author's photo and biography text are visible.
+    commands:
+      - command: assert
+        expect: the author's photo and biography text are visible
+  - prompt: Verify that the author's name is correctly displayed.
+    commands:
+      - command: assert
+        expect: the author's name "Joshua Keith Pearson" is correctly displayed
